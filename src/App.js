@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import Header from './Header';
+import Home from './Home';
+import TechTools from './TechTools';
+import About from './About';
+import Services from './Services';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
+import Footer from './Footer';
 import './App.css';
 
+
+
 function App() {
+  useEffect(() => {
+    ScrollReveal({
+      distance: '80px',
+      duration: 2000,
+      delay: 200,
+    });
+    ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+    ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+    ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+    ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+      <Header />
+      <Home />
+      
+      <About />
+      <Services />
+      <Portfolio />
+      <Contact />
+      <TechTools />
+      <Footer />
     </div>
   );
 }

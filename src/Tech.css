@@ -1,0 +1,51 @@
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+.tech-tools {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .tools-grid {
+    display: none;
+  }
+  
+  .tool-card,
+  .tool-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #1F242D;
+    color: white;
+  }
+  
+  .tool-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .tool-slide p,
+  .tool-card p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .mobile-slider {
+  
+        
+        display: none; 
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+  
